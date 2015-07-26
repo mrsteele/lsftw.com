@@ -1,0 +1,23 @@
+{
+  "name": "lsftw.com",
+  "version": "1.0.0",
+  "description": "The website for lsftw.com",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrsteele/lsftw.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrsteele/lsftw.com/issues"
+  },
+  "homepage": "https://github.com/mrsteele/lsftw.com#readme",
+  "dependencies": {
+    "express": "^4.13.1",
+    "grunt": "^0.4.5"
+  }
+}
