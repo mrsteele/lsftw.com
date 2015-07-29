@@ -1,3 +1,112 @@
+// Variables
+@brand-primary: #ba5dbf;
+@brand-black: #000000;
+@brand-gray: #eeeeee;
+@brand-white: #ffffff;
+
+@screen-desktop: 768px;
+@screen-mobile: 480px;
+
+@fontname: "8-bit";
+
+// Utils
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+// Custom Font
+@font-face {
+    font-family: @fontname;
+    src: url("../res/fonts/8bitoperator_jve/8bitOperatorPlus-Regular.ttf");
+}
+
+@font-face {
+    font-family: @fontname;
+    src: url("../res/fonts/8bitoperator_jve/8bitOperatorPlus-Bold.ttf");
+    font-weight: bold;
+}
+
+// Defaults
 body {
-    background: blue;
+    background: @brand-gray;
+    color: @brand-primary;
+    font-size: 12px;
+    font-family: @fontname;
+    line-height: 1.8em;
+    letter-spacing: 0.1em;
+    padding-bottom: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+h1 {
+    font-size: 2em;
+    padding-bottom: 0.8em;
+}
+p {
+    margin-bottom: 1em;
+}
+img {
+    max-width: 100%;
+}
+
+// Content
+main {
+    width: @screen-desktop;
+    margin: 10px auto 0;
+    .clearfix;
+    
+    &.content {
+        margin-top: 100px;
+    }
+    
+    section {
+        width: 50%;
+        float: left;
+    }
+    
+    // Mobile
+    @media all and (max-width: @screen-desktop) {
+        width: @screen-mobile;
+        
+        &.content {
+            margin-top: 10px;
+        }
+        
+        section {
+            width: 100%;
+            float: none;
+            padding: 0 20px;
+        }
+    }
+}
+
+footer {
+    background: @brand-white;
+    color: @brand-black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.8em;
+    
+    a {
+        color: inherit;
+        &:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    @media all and (max-width: @screen-desktop) {
+        p {
+            text-align: left;
+        }
+    }
+}
+
+@media all and (max-width: @screen-desktop) {
+    .mobile-center {
+        text-align: center;
+    }
 }
