@@ -1,0 +1,8 @@
+{
+    "jslint.options": {
+        "browser": true,
+        "node": true,
+        "$": true,
+        "jQuery": true
+    }
+}
